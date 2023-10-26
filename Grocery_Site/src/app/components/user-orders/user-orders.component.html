@@ -1,0 +1,15 @@
+<app-usernavbar></app-usernavbar>
+<h2 class="orders-heading">My Orders</h2>
+<div class="order-container">
+    <div class="order-item" *ngFor="let item of updatedOrder">
+      <img [src]="item.image" alt="Product Image" class="product-image">
+      <div class="product-details">
+        <h3 class="product-name">{{ item.productName }}</h3>
+        <p class="price">Price Paid: {{ item.totalMoneyPaid }}</p>
+        <p class="QuantityPurchased">QuantityPurchased: {{ item.productQuantity }}</p>
+        <p class="order-date">Order Date: {{ item.orderDate | date }}</p>
+        <p class="order-time">Order Time: {{ item.orderTime | date:'shortTime' }}</p>
+      </div>
+    </div>
+  </div>
+  
